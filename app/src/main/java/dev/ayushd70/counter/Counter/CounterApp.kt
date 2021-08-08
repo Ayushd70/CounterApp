@@ -11,6 +11,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 
 @Composable
 fun CounterApp() {
@@ -30,8 +31,11 @@ fun CounterApp() {
             verticalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxSize(),
         ) {
-          Text(text = "You have pressed the button this many times")
-          Text(text = "${counter.value}", style = MaterialTheme.typography.h4)
+          Text(text = "You have pressed the button this many times", textAlign = TextAlign.Center)
+          Text(
+              text = "${counter.value}",
+              textAlign = TextAlign.Center,
+              style = MaterialTheme.typography.h4)
         }
       })
 }
