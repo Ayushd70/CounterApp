@@ -36,7 +36,7 @@ fun CounterApp() {
                 modifier = Modifier.fillMaxSize(),
             ) {
                 Text(text = "You have pressed the button this many times")
-                Text(text = "4")
+                Text(text = "4", style = MaterialTheme.typography.h4)
             }
         }
     ) 
