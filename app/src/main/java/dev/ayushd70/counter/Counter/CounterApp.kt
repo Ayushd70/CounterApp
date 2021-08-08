@@ -1,8 +1,9 @@
 package dev.ayushd70.counter.Counter
 
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import android.graphics.drawable.Icon
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 
 @Composable
@@ -14,7 +15,13 @@ fun CounterApp() {
                     Text(text = "Compose Counter App")
                 }
             )
-        }
+        },
+        
+        floatingActionButton = {
+            FloatingActionButton(onClick = { /*TODO*/ }) {
+                Icon(imageVector = Icons.Default.Add, contentDescription ="Add")
+            }
+        },
     ) {
     }
 }
