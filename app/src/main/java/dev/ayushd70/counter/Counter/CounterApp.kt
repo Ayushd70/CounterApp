@@ -20,7 +20,7 @@ fun CounterApp() {
   Scaffold(
       topBar = { TopAppBar(title = { Text(text = "Compose Counter App") }) },
       floatingActionButton = {
-        FloatingActionButton(onClick = { /*TODO*/}) {
+        FloatingActionButton(onClick = { counter.value++ }) {
           Icon(imageVector = Icons.Default.Add, contentDescription = "Add")
         }
       },
