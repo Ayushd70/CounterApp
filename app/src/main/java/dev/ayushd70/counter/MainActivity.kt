@@ -11,27 +11,19 @@ import dev.ayushd70.counter.Counter.CounterApp
 import dev.ayushd70.counter.ui.theme.CounterTheme
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContent {
-            CounterTheme {
-                MyApp()
-            }
-        }
-    }
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContent { CounterTheme { MyApp() } }
+  }
 }
 
 @Composable
 fun MyApp() {
-    Surface(color = MaterialTheme.colors.background) {
-        CounterApp()
-    }
+  Surface(color = MaterialTheme.colors.background) { CounterApp() }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    CounterTheme {
-        MyApp()
-    }
+  CounterTheme { MyApp() }
 }
