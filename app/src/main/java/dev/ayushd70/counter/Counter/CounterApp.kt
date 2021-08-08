@@ -1,6 +1,7 @@
 package dev.ayushd70.counter.Counter
 
 import android.graphics.drawable.Icon
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -22,7 +23,13 @@ fun CounterApp() {
                 Icon(imageVector = Icons.Default.Add, contentDescription ="Add")
             }
         },
-    ) {
-    }
+        
+        content = {
+            Column {
+                Text(text = "You have pressed the button this many times")
+                Text(text = "4")
+            }
+        }
+    ) 
 }
 
